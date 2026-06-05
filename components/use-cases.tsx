@@ -1,48 +1,53 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
-import { Megaphone, ShoppingCart, CreditCard, RefreshCw, HelpCircle, Clock, Globe, Shield } from "lucide-react"
+import { Target, Presentation, Monitor, MessageCircleQuestion, Shield, Swords, Users, BookOpen, CheckSquare } from "lucide-react"
 
 const useCases = [
   {
-    category: "Sales Deck",
-    question: "Is your team following the sales deck structure and key messaging?",
-    icon: Megaphone,
+    category: "Positioning",
+    question: "Market category, functional areas covered & not covered",
+    icon: Target,
   },
   {
     category: "Pitch",
-    question: "Are reps delivering the value proposition as trained?",
-    icon: ShoppingCart,
+    question: "Sales deck, pitch, and positioning keywords",
+    icon: Presentation,
   },
   {
-    category: "Demo Script",
-    question: "Is the demo following the scripted flow and hitting key features?",
-    icon: CreditCard,
+    category: "Demo",
+    question: "Demo script, product tour",
+    icon: Monitor,
   },
   {
-    category: "ICP",
-    question: "Are reps qualifying prospects against your Ideal Customer Profile?",
-    icon: HelpCircle,
+    category: "Qualification questions",
+    question: "Questions to understand company context, project definition, pain. Specific mandatory questions",
+    icon: MessageCircleQuestion,
   },
   {
-    category: "Persona",
-    question: "Is messaging adapted to the right buyer persona?",
-    icon: Clock,
-  },
-  {
-    category: "BANT",
-    question: "Are Budget, Authority, Need, and Timeline being properly qualified?",
-    icon: Globe,
-  },
-  {
-    category: "MEDDIC",
-    question: "Is MEDDIC methodology being applied consistently across calls?",
+    category: "Objection handling",
+    question: "Typical objections and expected answers",
     icon: Shield,
   },
   {
     category: "Competition",
-    question: "How are reps handling competitive objections and positioning?",
-    icon: RefreshCw,
+    question: "Main competitors and differentiators",
+    icon: Swords,
+  },
+  {
+    category: "ICP & Persona",
+    question: "Ideal Customer Profile and buying persona",
+    icon: Users,
+  },
+  {
+    category: "Customer stories",
+    question: "Most relevant customer stories per segment",
+    icon: BookOpen,
+  },
+  {
+    category: "BANT & MEDDIC",
+    question: "Budget, Economic buyer, Decision process, Pain identification, Time to buy,...",
+    icon: CheckSquare,
   },
 ]
 
@@ -81,7 +86,7 @@ export function UseCases() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-sm sm:text-base text-muted-foreground max-w-xl mx-auto"
         >
-          Best of BANT & MEDDIC. 25+ AI Agents to analyze Sales Playbook application.
+          Score every element of your sales playbook
         </motion.p>
       </div>
 

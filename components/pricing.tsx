@@ -6,29 +6,62 @@ import { Button } from "@/components/ui/button"
 
 const plans = [
   {
-    name: "Starter",
+    name: "Free",
     price: "$0",
     period: "forever",
-    description: "Perfect for trying SalesScore AI",
-    features: ["50 calls/month scored", "5 AI Agents", "Basic playbook scoring", "Slack notifications"],
-    cta: "Get Started",
+    description: "Perfect for trying Dokima.AI",
+    features: ["5 calls/month scored", "Basic playbook scoring", "Email support"],
+    cta: "Choose plan",
     featured: false,
+    ctaLink: "/buy",
   },
   {
-    name: "Pro",
-    price: "$199",
+    name: "Business",
+    price: "$99",
     period: "/month",
     description: "For growing sales teams",
     features: [
-      "Unlimited calls scored",
-      "25+ AI Agents",
-      "BANT & MEDDIC scoring",
-      "CRM integration",
+      "100 calls/month scored",
+      "Full playbook scoring",
+      "Slack & Teams integration",
       "Team analytics",
       "Priority support",
     ],
-    cta: "Start Free Trial",
+    cta: "Choose plan",
     featured: true,
+    ctaLink: "/buy",
+  },
+  {
+    name: "Premium",
+    price: "$299",
+    period: "/month",
+    description: "For scaling organizations",
+    features: [
+      "Unlimited calls scored",
+      "Advanced analytics",
+      "CRM integration",
+      "Custom playbook templates",
+      "Dedicated support",
+    ],
+    cta: "Choose plan",
+    featured: false,
+    ctaLink: "/buy",
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "For large organizations",
+    features: [
+      "Everything in Premium",
+      "Custom integrations",
+      "SLA guarantees",
+      "Dedicated account manager",
+      "On-premise deployment",
+    ],
+    cta: "Talk to sales",
+    featured: false,
+    ctaLink: "/contact",
   },
 ]
 
@@ -37,7 +70,7 @@ export function Pricing() {
 
   return (
     <section id="pricing" className="relative py-16 sm:py-24 lg:py-32">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,12 +79,12 @@ export function Pricing() {
           className="text-center mb-10 sm:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-display mb-4">
-            <span className="text-gradient-lime">Simple</span> pricing
+            <span className="text-gradient-lime">Flexible plans</span> that scale with your teams
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">No hidden fees. Cancel anytime.</p>
+          <p className="text-sm sm:text-base text-muted-foreground">Start for free. Upgrade seamlessly based on your needs.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}

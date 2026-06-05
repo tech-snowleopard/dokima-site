@@ -7,27 +7,32 @@ const faqs = [
   {
     question: "How quickly can I start scoring my sales calls?",
     answer:
-      "Most teams have their first calls scored within 30 minutes. Simply connect your call recording tool (Gong, Chorus, etc.), configure your playbook criteria, and start scoring. No coding required.",
+      "Get first calls scored against your playbook within 5 minutes. Simply connect your call recording tool (Gong, Fireflies, etc.), upload your playbook, and start scoring. Out of the box. No LLM prompting required.",
   },
   {
-    question: "Can SalesScore AI integrate with my existing tools?",
+    question: "How does Dokima.AI learn my playbook?",
     answer:
-      "Yes! SalesScore AI integrates with popular call recording tools like Gong, Chorus, and Salesloft, plus CRMs like Salesforce and HubSpot. Results are delivered via Slack, Teams, or directly in your CRM.",
+      "Dokima.AI guides you to upload the different pieces of your sales playbook so that your sales meetings can be correctly scored. You can feed Dokima.AI with additional elements throughout your usage of the product.",
   },
   {
-    question: "What methodologies does SalesScore AI support?",
+    question: "How does Dokima.AI access my sales meetings?",
     answer:
-      "SalesScore AI supports BANT, MEDDIC, SPIN Selling, and custom playbook criteria. Our 25+ AI Agents analyze sales deck delivery, demo scripts, ICP qualification, persona matching, and competitive handling.",
+      "Dokima.AI seamlessly integrates with most popular call recording tools like Gong, Fireflies or telephony systems like Aircall, and lots of others. Scoring can be shared or automatically pushed into Slack, Teams or Google Chat.",
   },
   {
-    question: "How does SalesScore AI learn my playbook?",
+    question: "How does Dokima.AI score my meetings?",
     answer:
-      "SalesScore AI uses your sales playbook documentation, demo scripts, and qualification criteria to configure custom scoring models. The AI continuously improves based on your feedback and coaching inputs.",
+      "Dokima.AI has developed inhouse industry specific, expert based AI prompting to ensure application of your sales playbook is correctly evaluated and provides you actionable items for your sales enablement teams.",
   },
   {
-    question: "Is my sales data secure?",
+    question: "Do I need to build my own LLM prompts?",
     answer:
-      "Absolutely. SalesScore AI is SOC 2 Type II certified and GDPR compliant. All call data is encrypted at rest and in transit. We never use your data to train models for other customers.",
+      "No. Dokima.AI is a ready to be used pre-built application that doesn't require you to build any LLM prompt.",
+  },
+  {
+    question: "What if I don't have any sales playbook?",
+    answer:
+      "Having a structured sales playbook that sales reps will follow is a best practice of B2B Selling. Contact Dokima.AI and we will connect you to one of our partners to help you build a robust and applicable sales playbook.",
   },
 ]
 
@@ -46,7 +51,7 @@ export function FAQ() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-display mb-4">
             Frequently asked <span className="text-gradient-lime">questions</span>
           </h2>
-          <p className="text-muted-foreground">Everything you need to know about SalesScore AI</p>
+          <p className="text-muted-foreground">Everything you need to know about Dokima.AI</p>
         </motion.div>
 
         <motion.div
