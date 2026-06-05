@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { HowItWorks } from "@/components/how-it-works"
+import { Integrations } from "@/components/integrations"
+import { Benefits } from "@/components/benefits"
 import { UseCases } from "@/components/use-cases"
 import { Testimonials } from "@/components/testimonials"
 import { Pricing } from "@/components/pricing"
@@ -24,6 +26,8 @@ export default function Home() {
 
       <Hero />
       <HowItWorks />
+      <Integrations />
+      <Benefits />
       <UseCases />
       <Testimonials />
       <Pricing />
