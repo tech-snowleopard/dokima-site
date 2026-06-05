@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { VideoGallery } from "@/components/video-gallery"
 import { HowItWorks } from "@/components/how-it-works"
 import { UseCases } from "@/components/use-cases"
 import { Stats } from "@/components/stats"
@@ -25,7 +24,6 @@ export default function Home() {
       <Navbar />
 
       <Hero />
-      <VideoGallery />
       <HowItWorks />
       <UseCases />
       <Stats />

@@ -6,19 +6,10 @@ import { motion, useReducedMotion } from "framer-motion"
 import { useState, useEffect } from "react"
 
 const examplePrompts = [
-  "Score my latest discovery call...",
-  "How well did I follow MEDDIC...",
-  "Analyze my demo presentation...",
-  "Rate my qualification questions...",
-  "Check my pitch against playbook...",
-]
-
-const trustedLogos = [
-  { name: "Salesforce", text: "Salesforce" },
-  { name: "HubSpot", text: "HubSpot" },
-  { name: "Gong", text: "Gong" },
-  { name: "Outreach", text: "Outreach" },
-  { name: "Clari", text: "Clari" },
+  "Enter your email and start your onboarding for free...",
+  "john@company.com",
+  "sarah@techstartup.io",
+  "team@enterprise.com",
 ]
 
 export function Hero() {
@@ -79,7 +70,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      <div className="flex-1 flex items-center justify-center pt-28 lg:pt-32 pb-40 sm:pb-32">
+      <div className="flex-1 flex items-center justify-center pt-28 lg:pt-32 pb-16 sm:pb-20">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             initial={shouldReduceMotion ? {} : fadeUp.initial}
@@ -87,9 +78,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-display text-balance mb-6 leading-[1.1]"
           >
-            <span className="text-gradient-lime">Playbook Execution,</span>
+            <span className="text-gradient-lime">Control Sales Playbook Execution.</span>
             <br />
-            <span className="text-foreground">Scored.</span>
+            <span className="text-foreground">Every meeting, scored.</span>
           </motion.h1>
 
           <motion.p
@@ -98,8 +89,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 text-pretty leading-relaxed px-2"
           >
-            AI-powered, pre-built scoring to enforce your sales playbook. SalesScore AI automatically scores how your
-            reps apply your Sales Playbook so that you enforce your GTM execution.
+            Dokima.AI automatically scores how well your sales reps apply your company sales playbook in their meetings.
           </motion.p>
 
           <motion.div
@@ -128,7 +118,7 @@ export function Hero() {
                 )}
                 {!prompt && isFocused && (
                   <div className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 pointer-events-none text-sm sm:text-base text-muted-foreground/50">
-                    Score a sales call...
+                    Enter your email and start your onboarding for free...
                   </div>
                 )}
               </div>
@@ -186,29 +176,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
-        className="absolute bottom-0 left-0 right-0 py-6 sm:py-8 border-t border-border/30 bg-background/80 backdrop-blur-sm"
-      >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs sm:text-sm text-muted-foreground/60 mb-4 sm:mb-6 text-center">
-            Integrates with your existing call recording tools
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-12 gap-y-3 sm:gap-y-4">
-            {trustedLogos.map((logo) => (
-              <span
-                key={logo.name}
-                className="text-base sm:text-lg md:text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground/80 transition-colors"
-              >
-                {logo.text}
-              </span>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }
