@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Claude Dark Theme - Anthropic-inspired warm cream palette */
+:root {
+  /* Backgrounds - warm dark tones */
+  --background: #1a1816;
+  --foreground: #e9e7e5;
+  --card: #242220;
+  --card-foreground: #e9e7e5;
+  --popover: #242220;
+  --popover-foreground: #e9e7e5;
+  /* Primary is warm orange #f06210 */
+  --primary: #f06210;
+  --primary-foreground: #1a1816;
+  --secondary: #2d2926;
+  --secondary-foreground: #c5c0bb;
+  --muted: #2d2926;
+  --muted-foreground: #9a938d;
+  /* Accent matches primary orange */
+  --accent: #f06210;
+  --accent-foreground: #1a1816;
+  --destructive: #ef4444;
+  --destructive-foreground: #e9e7e5;
+  /* Border - warm gray tones */
+  --border: #3d3935;
+  --input: #2d2926;
+  --ring: #f06210;
+  --chart-1: #f06210;
+  --chart-2: #d05711;
+  --chart-3: #ed9362;
+  --chart-4: #d85f14;
+  --chart-5: #9a938d;
+  --radius: 0.5rem;
+  --sidebar: #1a1816;
+  --sidebar-foreground: #e9e7e5;
+  --sidebar-primary: #f06210;
+  --sidebar-primary-foreground: #1a1816;
+  --sidebar-accent: #2d2926;
+  --sidebar-accent-foreground: #e9e7e5;
+  --sidebar-border: #3d3935;
+  --sidebar-ring: #f06210;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-serif: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* Updated to PT Mono font for logo */
+  --font-logo: var(--font-pt-mono), "PT Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated glow to use warm orange */
+.hero-glow {
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 40%,
+    rgba(240, 98, 16, 0.25) 0%,
+    rgba(208, 87, 17, 0.1) 40%,
+    transparent 70%
+  );
+}
+
+/* Updated gradient text to warm orange */
+.text-gradient-lime {
+  background: linear-gradient(135deg, #f06210 0%, #ed9362 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Terminal window styling */
+.terminal-window {
+  background: oklch(0.1 0 0);
+  border: 1px solid oklch(0.25 0 0);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Slowed animation from 30s to 60s for a gentler scroll */
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fixed selection - solid color without opacity for vibrant appearance */
+::selection {
+  background: #f06210;
+  color: #1a1816;
+}
+
+/* Letter spacing for headings */
+.tracking-display {
+  letter-spacing: -0.02em;
+}
+
+/* Removed hero-breathe animation - replaced with mouse parallax */
