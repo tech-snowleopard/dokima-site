@@ -1,23 +1,28 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
-import { Upload, Sparkles, MessageSquare } from "lucide-react"
+import { Upload, Link, BarChart3, Bell } from "lucide-react"
 
 const steps = [
   {
     icon: Upload,
-    title: "Connect",
-    description: "Leverage your existing call recording application. SalesScore AI integrates seamlessly with Gong, Chorus, and more.",
+    title: "Upload your sales playbook",
+    description: "Upload the different pieces of your sales playbook: pitch, demo script, mandatory questions, objection handling, competition,...",
   },
   {
-    icon: Sparkles,
-    title: "Analyze",
-    description: "25+ AI Agents analyze your sales calls against your playbook: BANT, MEDDIC, Sales Deck, Demo Script, ICP & Persona.",
+    icon: Link,
+    title: "Connect your recording tool",
+    description: "Connect Dokima.AI to your sales call recording tool and/or telephony system",
   },
   {
-    icon: MessageSquare,
-    title: "Score & Act",
-    description: "Automate scoring and make it actionable in your communication channels: Slack, Teams, CRM.",
+    icon: BarChart3,
+    title: "Score your meetings",
+    description: "Score meetings and evaluate how your sales reps apply your sales playbook",
+  },
+  {
+    icon: Bell,
+    title: "Receive automatically",
+    description: "Connect your Slack, Google Chat, Teams and receive automatically scores in your day to day working environment",
   },
 ]
 
@@ -36,10 +41,10 @@ export function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-display mb-4">
             How it <span className="text-gradient-lime">works</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">From call recording to actionable scoring in three simple steps</p>
+          <p className="text-muted-foreground max-w-xl mx-auto">From playbook to actionable scoring in four simple steps</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
+        <div className="grid md:grid-cols-2 gap-8 relative">
           {steps.map((step, index) => (
             <motion.div
               key={step.title}

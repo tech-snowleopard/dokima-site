@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Command, CornerDownLeft } from "lucide-react"
+import { Command, CornerDownLeft } from "lucide-react"
 import { motion, useReducedMotion } from "framer-motion"
 import { useState, useEffect } from "react"
 
@@ -145,34 +145,6 @@ export function Hero() {
             <span>◇</span>
             <span>✕</span>
             <span>◇</span>
-          </motion.div>
-
-          <motion.div
-            initial={shouldReduceMotion ? {} : fadeUp.initial}
-            animate={fadeUp.animate}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mb-6"
-          >
-            <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2">
-              <span className="text-gradient-lime">25+</span> AI Agents Ready to Go
-            </p>
-            <p className="text-muted-foreground text-xs sm:text-sm">100% Your Playbook. 100% B2B Tech.</p>
-          </motion.div>
-
-          <motion.div
-            initial={shouldReduceMotion ? {} : fadeUp.initial}
-            animate={fadeUp.animate}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3"
-          >
-            <Button size="xl" rounded="full" className="gap-2 w-full sm:w-auto">
-              Get Started Free
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-            <Button variant="outline" size="xl" rounded="full" className="gap-2 bg-transparent w-full sm:w-auto">
-              See How It Works
-              <ArrowRight className="w-4 h-4" />
-            </Button>
           </motion.div>
         </div>
       </div>
