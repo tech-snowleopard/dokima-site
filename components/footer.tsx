@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BarChart3, Zap } from "lucide-react"
 
 const footerLinks = {
   Product: [
@@ -25,10 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <BarChart3 className="w-5 h-5 text-primary" />
-              <span className="font-bold text-foreground" style={{ letterSpacing: "-0.05em" }}>
-                SalesScore AI
-              </span>
+              <img src="/dokima-logo.png" alt="Dokima logo" className="h-7 w-auto object-contain" />
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground">Playbook Execution, Scored.</p>
           </div>
