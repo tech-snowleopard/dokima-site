@@ -122,7 +122,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Button variant={plan.featured ? "default" : "outline"} size="lg" rounded="full" className="w-full gap-2">
+              <Button variant={plan.featured ? "default" : "outline"} size="lg" className="w-full gap-2">
                 {plan.cta}
                 <ArrowRight className="w-4 h-4" />
               </Button>

@@ -107,13 +107,17 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8 py-4" aria-label="Main navigation">
         <div className="flex h-14 items-center justify-between bg-background/60 backdrop-blur-xl border border-border/50 rounded-full px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-2" aria-label="SalesScore AI home">
-            <BarChart3 className="w-5 sm:w-6 h-5 sm:h-6 text-primary" aria-hidden="true" />
+          <Link href="/" className="flex items-center gap-2" aria-label="Dokima.AI home">
+            <img
+              src="/dokima-icon.png"
+              alt="Dokima.AI logo"
+              className="w-5 sm:w-6 h-5 sm:h-6 object-contain"
+            />
             <span
               className="font-[family-name:var(--font-pt-mono)] font-bold text-base sm:text-lg text-foreground"
               style={{ letterSpacing: "-0.05em" }}
             >
-              SalesScore AI
+              Dokima.AI
             </span>
           </Link>
 
@@ -218,10 +222,10 @@ export function Navbar() {
 
           {/* Desktop Buttons - hidden below lg */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm" rounded="full">
+            <Button variant="ghost" size="sm">
               Log in
             </Button>
-            <Button size="sm" rounded="full" className="gap-1.5">
+            <Button size="sm" className="gap-1.5">
               Get Started
               <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
             </Button>
@@ -260,12 +264,12 @@ export function Navbar() {
             >
               <div className="flex items-center justify-between px-6 py-4 bg-background border-b border-border/50">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                  <BarChart3 className="w-5 h-5 text-primary" aria-hidden="true" />
+                  <img src="/dokima-icon.png" alt="Dokima.AI logo" className="w-5 h-5 object-contain" />
                   <span
                     className="font-[family-name:var(--font-pt-mono)] font-bold text-base text-foreground"
                     style={{ letterSpacing: "-0.05em" }}
                   >
-                    SalesScore AI
+                    Dokima.AI
                   </span>
                 </Link>
                 <button
@@ -357,10 +361,10 @@ export function Navbar() {
               </div>
 
               <div className="px-6 py-4 border-t border-border/50 bg-background flex flex-col gap-3">
-                <Button variant="ghost" rounded="lg" className="justify-center text-base py-6 w-full">
+                <Button variant="ghost" className="justify-center text-base py-6 w-full">
                   Log in
                 </Button>
-                <Button rounded="full" className="py-6 text-base w-full">
+                <Button className="py-6 text-base w-full">
                   Get Started
                 </Button>
               </div>

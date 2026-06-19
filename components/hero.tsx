@@ -127,7 +127,7 @@ export function Hero() {
                   <Command className="w-3 h-3" />
                   <CornerDownLeft className="w-3 h-3" />
                 </div>
-                <Button size="sm" rounded="lg">
+                <Button size="sm">
                   Try it
                 </Button>
               </div>

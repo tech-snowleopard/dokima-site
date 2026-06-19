@@ -115,7 +115,6 @@ export function QuickStart() {
                 onClick={() => setActiveTab(tab)}
                 size="sm"
                 variant={activeTab === tab ? "default" : "secondary"}
-                rounded="lg"
                 className="uppercase tracking-wide text-[10px] sm:text-xs flex-shrink-0"
               >
                 {tab}

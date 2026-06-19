@@ -115,6 +115,11 @@
   background-clip: text;
 }
 
+/* Orange gradient background for primary buttons */
+.bg-gradient-orange {
+  background-image: linear-gradient(98deg, #ff5a09 0%, #ff9c09 100%);
+}
+
 /* Terminal window styling */
 .terminal-window {
   background: oklch(0.1 0 0);

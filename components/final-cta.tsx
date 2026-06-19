@@ -29,7 +29,7 @@ export function FinalCTA() {
             <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
               Score how well your sales reps apply your company sales playbook in their meetings. AI-powered, pre-built scoring to drive consistent sales playbook execution.
             </p>
-            <Button size="xl" rounded="full" className="gap-2 min-w-[200px]">
+            <Button size="xl" className="gap-2 min-w-[200px]">
               Start for free
               <ArrowRight className="w-4 h-4" />
             </Button>
