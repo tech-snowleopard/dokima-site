@@ -3,45 +3,45 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Claude Dark Theme - Anthropic-inspired warm cream palette */
+/* Claude Light Theme - Anthropic-inspired warm cream palette */
 :root {
-  /* Backgrounds - warm dark tones */
-  --background: #1a1816;
-  --foreground: #e9e7e5;
-  --card: #242220;
-  --card-foreground: #e9e7e5;
-  --popover: #242220;
-  --popover-foreground: #e9e7e5;
-  /* Primary is warm orange #f06210 */
-  --primary: #f06210;
-  --primary-foreground: #1a1816;
-  --secondary: #2d2926;
-  --secondary-foreground: #c5c0bb;
-  --muted: #2d2926;
-  --muted-foreground: #9a938d;
+  /* Backgrounds - warm cream tones */
+  --background: #faf9f8;
+  --foreground: #2d2b2a;
+  --card: #ffffff;
+  --card-foreground: #2d2b2a;
+  --popover: #ffffff;
+  --popover-foreground: #2d2b2a;
+  /* Primary is warm orange #ff5a09 */
+  --primary: #ff5a09;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f4f1;
+  --secondary-foreground: #5a5654;
+  --muted: #f7f4f1;
+  --muted-foreground: #8a8480;
   /* Accent matches primary orange */
-  --accent: #f06210;
-  --accent-foreground: #1a1816;
+  --accent: #ff5a09;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --destructive-foreground: #e9e7e5;
+  --destructive-foreground: #ffffff;
   /* Border - warm gray tones */
-  --border: #3d3935;
-  --input: #2d2926;
-  --ring: #f06210;
-  --chart-1: #f06210;
-  --chart-2: #d05711;
+  --border: #c4bfba;
+  --input: #eeebe8;
+  --ring: #ff5a09;
+  --chart-1: #ff5a09;
+  --chart-2: #ff9c09;
   --chart-3: #ed9362;
   --chart-4: #d85f14;
-  --chart-5: #9a938d;
+  --chart-5: #8a8480;
   --radius: 0.5rem;
-  --sidebar: #1a1816;
-  --sidebar-foreground: #e9e7e5;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2d2b2a;
   --sidebar-primary: #f06210;
-  --sidebar-primary-foreground: #1a1816;
-  --sidebar-accent: #2d2926;
-  --sidebar-accent-foreground: #e9e7e5;
-  --sidebar-border: #3d3935;
-  --sidebar-ring: #f06210;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f7f6f5;
+  --sidebar-accent-foreground: #2d2b2a;
+  --sidebar-border: #e5e2df;
+  --sidebar-ring: #ff5a09;
 }
 
 @theme inline {
@@ -97,19 +97,19 @@
   }
 }
 
-/* Updated glow to use warm orange */
+/* Updated glow to use warm orange - softer for light theme */
 .hero-glow {
   background: radial-gradient(
     ellipse 60% 40% at 50% 40%,
-    rgba(240, 98, 16, 0.25) 0%,
-    rgba(208, 87, 17, 0.1) 40%,
+    rgba(255, 90, 9, 0.12) 0%,
+    rgba(255, 156, 9, 0.06) 40%,
     transparent 70%
   );
 }
 
 /* Updated gradient text to warm orange */
 .text-gradient-lime {
-  background: linear-gradient(135deg, #f06210 0%, #ed9362 100%);
+  background: linear-gradient(98deg, #ff5a09 0%, #ff9c09 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -147,8 +147,8 @@ html {
 
 /* Fixed selection - solid color without opacity for vibrant appearance */
 ::selection {
-  background: #f06210;
-  color: #1a1816;
+  background: #ff5a09;
+  color: #ffffff;
 }
 
 /* Letter spacing for headings */

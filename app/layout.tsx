@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#1a1816",
-  colorScheme: "dark",
+  themeColor: "#faf9f8",
+  colorScheme: "light",
 }
 
 export default function RootLayout({
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`dark ${_ptMono.variable}`}>
+    <html lang="en" className={`${_ptMono.variable} bg-background`}>
       <body className="font-sans antialiased min-h-screen">
         {children}
         <Analytics />

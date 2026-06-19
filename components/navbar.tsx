@@ -144,7 +144,7 @@ export function Navbar() {
                           <DropdownMenuItem key={item.href} asChild className="group">
                             <Link href={item.href} className="flex items-center gap-2 cursor-pointer">
                               <item.icon
-                                className="w-4 h-4 text-primary group-data-[highlighted]:text-black transition-colors"
+                                className="w-4 h-4 text-primary group-data-[highlighted]:text-primary-foreground transition-colors"
                                 aria-hidden="true"
                               />
                               {item.label}
@@ -169,7 +169,7 @@ export function Navbar() {
                           <DropdownMenuItem key={item.href} asChild className="group">
                             <Link href={item.href} className="flex items-center gap-2 cursor-pointer">
                               <item.icon
-                                className="w-4 h-4 text-primary group-data-[highlighted]:text-black transition-colors"
+                                className="w-4 h-4 text-primary group-data-[highlighted]:text-primary-foreground transition-colors"
                                 aria-hidden="true"
                               />
                               {item.label}
@@ -194,7 +194,7 @@ export function Navbar() {
                   <DropdownMenuItem key={item.href} asChild className="group">
                     <Link href={item.href} className="flex items-center gap-2 cursor-pointer">
                       <item.icon
-                        className="w-4 h-4 text-primary group-data-[highlighted]:text-black transition-colors"
+                        className="w-4 h-4 text-primary group-data-[highlighted]:text-primary-foreground transition-colors"
                         aria-hidden="true"
                       />
                       {item.label}
@@ -292,7 +292,7 @@ export function Navbar() {
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         <item.icon
-                          className="w-5 h-5 text-primary group-hover:text-black transition-colors"
+                          className="w-5 h-5 text-primary group-hover:text-foreground transition-colors"
                           aria-hidden="true"
                         />
                         {item.label}
@@ -315,7 +315,7 @@ export function Navbar() {
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         <item.icon
-                          className="w-5 h-5 text-primary group-hover:text-black transition-colors"
+                          className="w-5 h-5 text-primary group-hover:text-foreground transition-colors"
                           aria-hidden="true"
                         />
                         {item.label}
@@ -336,7 +336,7 @@ export function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <item.icon
-                      className="w-5 h-5 text-primary group-hover:text-black transition-colors"
+                      className="w-5 h-5 text-primary group-hover:text-foreground transition-colors"
                       aria-hidden="true"
                     />
                     {item.label}

@@ -13,7 +13,7 @@ export function FinalCTA() {
         className="relative max-w-5xl mx-auto bg-background rounded-3xl overflow-hidden py-16 lg:py-24 px-6 sm:px-12"
         style={{
           border: "1px dashed",
-          borderColor: "rgba(240, 98, 16, 0.4)",
+          borderColor: "rgba(255, 90, 9, 0.4)",
           borderDasharray: "12 8",
         }}
       >
